@@ -19,3 +19,8 @@ print(mylist[-1]) #output: "d" this is last element
 print(mylist[1:3])
 print(mylist[::-1]) #reversed list
 print(mylist[::1])
+
+num1=[1,2,3]
+num2=num1
+num2.append(4)
+print(num1)
