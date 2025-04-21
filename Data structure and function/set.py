@@ -1,58 +1,90 @@
+# Set
+#  A set is an unordered collection of unique elements.
+#  1. Sets are mutable (can be modified), but they do not allow duplicate values.
+#  2. Sets are defined using curly braces {} or the set() constructor.
+
+#basic Set
 fruits={"apple","banana","cherry"}
+print(fruits)
+
+# Set with Duplicates (Duplicates will be removed)
+fruits = {"apple", "banana", "cherry", "apple", "banana"}
+print(fruits)  
+print()
+
+#Creating a Set from a list
+numbers = set([1,2,3,4,5])
+print(numbers)
+print(list(numbers))
+print()
+
+#add() -Add an element
+fruits={"apple","banana"}
+fruits.add("cherry")
+print(fruits)
+print()
+
+#clear() -remove all elements
+fruits = {"apple","banana","cherry"}
+fruits.clear()
+print()
+
+#Copy -copy a set
+fruits={"apple","banana","cherry"}
+fruits_copy=fruits.copy()
+print(fruits_copy)
+print()
+
+# discard() – Remove an element (if exists)
 fruits.discard("apple")
 print(fruits)
 print()
 
-# print(dir(list))
-# print()
-
-# print(dir(set))
-# print()
-
-# print(dir(tuple))
-
-set1={1,2,3}
-set2={4,6,3}
-union_set=set1.union(set2)
-print(set1.union(set2))
-print(set1 & set2)
-print(set1 | set2)
-
-print(set1.symmetric_difference(set2))
+ # remove() – Remove an element (raises error if element doesn't exist)
+ 
+fruits={"apple","banana","cherry"}
+fruits.remove("cherry")
+print(fruits)
+# fruits.remove("orange")
+print(fruits)
 print()
 
-# course_A = {"Alice", "Bob", "Charlie", "David"}
-# course_B = {"Charlie", "Eve", "David", "Frank"}
-
-
-# Write a program that:
-
-# 1. Finds students who are enrolled in both courses.
-# 2. Finds students who are enrolled in only Course A.
-# 3. Finds students who are enrolled in either Course A or Course B but not both.
-
-course_A = {"Alice", "Bob", "Charlie", "David"}
-course_B = {"Charlie", "Eve", "David", "Frank"}
-
-print("1:",course_A & course_B)
-print("2:",course_A - course_B)
-print("3:",course_A ^ course_B)
+# union() – Combine two sets
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print("Set1|set2:",set1|set2)
+union_set = set1.union(set2)
+print("union_set:",union_set)
 print()
 
-print("1:",course_A.intersection(course_B))
-print("2:",course_A.difference(course_B))
-print("3:",course_A.symmetric_difference(course_B))
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print("set1 & set2 :",set1 &set2)
+intersection_set = set1.intersection(set2)
+print("Inheritance set:",intersection_set) 
 print()
 
-students = [
-    ("Alice", 3.75),
-    ("Bob", 3.60),
-    ("Charlie", 3.90),
-]
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print("Set1 -set2:",set1-set2)
+difference_set = set1.difference(set2)
+print("difference_set:",difference_set)
+print("Symmetric_Difference_set:",set1.symmetric_difference(set2))
+print("set1^set2:",set1^set2)
+print()
 
-for name,cgpa in students:
-    print(f"Name : {name}, CGPA : {cgpa}")
-    
+#issubset -Check if the set is a subset of another
+set1 = {1,2}
+set2 = {1,2,3,4}
+print(set1.issubset(set2))
+print(set1.issuperset(set2))
+print()
+
+set1 = {1,2,3,4}
+set2 = {1,2}
+print(set1.issubset(set2))
+print(set1.issuperset(set2))
+
 
 
 
